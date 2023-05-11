@@ -10,6 +10,6 @@ test('Test that Mocks are running', async ({ page }) => {
 	// response should contain objects
 	expect(data).toBeInstanceOf(Array)
 	expect(data.length).toEqual(1)
-	expect(data[1].id).toEqual(1)
-	expect(data[1].name).toEqual('Mocked post')
+	expect(data[1].id).toEqual(18)
+	expect(data[1].title).toEqual('Mocked post')
 })

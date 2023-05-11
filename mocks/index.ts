@@ -8,7 +8,7 @@ const handlers = [
 		return res(
 			ctx.json([
 				{
-					id: 1,
+					id: 18,
 					title: 'Mocked post',
 				},
 			]),

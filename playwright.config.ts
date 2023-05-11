@@ -15,11 +15,11 @@ export default {
 	workers: process.env.CI ? 1 : undefined,
 	reporter: 'html',
 	use: {
-		actionTimeout: 0,
+		actionTimeout: 5 * 1000,
 		baseURL: `http://localhost:${PORT}/`,
 		trace: 'on',
 		video: 'on',
-		viewport: { width: 1280, height: 720 },
+		viewport: { width: 1920, height: 1080 },
 	},
 
 	projects: [
