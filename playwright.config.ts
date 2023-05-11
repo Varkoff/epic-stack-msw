@@ -17,7 +17,9 @@ export default {
 	use: {
 		actionTimeout: 0,
 		baseURL: `http://localhost:${PORT}/`,
-		trace: 'on-first-retry',
+		trace: 'on',
+		video: 'on',
+		viewport: { width: 1280, height: 720 },
 	},
 
 	projects: [
