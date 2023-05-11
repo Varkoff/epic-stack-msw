@@ -4,6 +4,17 @@ import closeWithGrace from 'close-with-grace'
 import { requiredHeader, writeEmail } from './utils'
 
 const handlers = [
+	rest.get('http://example.com/posts', (req, res, ctx) => {
+		return res(
+			ctx.json([
+				{
+					id: 1,
+					title: 'Mocked post',
+				},
+			]),
+			ctx.status(200),
+		)
+	}),
 	process.env.REMIX_DEV_HTTP_ORIGIN
 		? rest.post(`${process.env.REMIX_DEV_HTTP_ORIGIN}/ping`, req =>
 				req.passthrough(),
