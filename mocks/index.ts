@@ -4,7 +4,7 @@ import closeWithGrace from 'close-with-grace'
 import { requiredHeader, writeEmail } from './utils'
 
 const handlers = [
-	rest.get('http://example.com/posts', (req, res, ctx) => {
+	rest.get(`${process.env.BACKEND_URL}/posts`, (req, res, ctx) => {
 		return res(
 			ctx.json([
 				{
